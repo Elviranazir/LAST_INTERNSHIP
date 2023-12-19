@@ -31,5 +31,16 @@ public class US1Login {
     public void homePageShouldBeDisplayed() {
         Assert.assertTrue(lp.welcomeMessage.isDisplayed(), "Test Failed");
     }
+
+    @And("Enter invalid username and invalid password")
+    public void enterInvalidUsernameAndInvalidPassword() {
+        lp.username.sendKeys("Student");
+        lp.password.sendKeys("S1234");
+    }
+
+    @Then("Error message should be displayed")
+    public void errorMessageShouldBeDisplayed() {
+        Assert.assertTrue(lp.invalidMessage.isDisplayed(),"Test Failed");
+    }
 }
 
