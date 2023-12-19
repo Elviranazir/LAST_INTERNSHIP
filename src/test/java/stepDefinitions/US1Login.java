@@ -3,20 +3,18 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import pages.LoginPage;
-import utilities.BD;
+import utilities.BaseDriver;
 
 
-public class Login {
+public class US1Login {
 
     LoginPage lp = new LoginPage();
 
     @Given("the user navigates to campus website")
     public void theUserNavigatesToCampusWebsite() {
-        BD.getDriver().get("https://test.mersys.io/");}
+        BaseDriver.getDriver().get("https://test.mersys.io/");}
 
     @And("Enter valid username and valid password")
     public void enterValidUsernameAndValidPassword() {

@@ -3,12 +3,12 @@ package pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import utilities.BD;
+import utilities.BaseDriver;
 
 public class LoginPage extends MyMethods {
 
     public LoginPage() {
-        PageFactory.initElements(BD.getDriver(), this);
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
     @FindBy(id = "mat-input-0")

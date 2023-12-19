@@ -7,13 +7,13 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import utilities.BD;
+import utilities.BaseDriver;
 
 import java.time.Duration;
 
 public class MyMethods {
 
-    public WebDriverWait wait = new WebDriverWait(BD.getDriver(), Duration.ofSeconds(20));
+    public WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
 
     public void myClick(WebElement element) {
         wait.until(ExpectedConditions.elementToBeClickable(element));
@@ -28,13 +28,13 @@ public class MyMethods {
     }
 
     public void scrollToElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) BD.getDriver();
+        JavascriptExecutor js = (JavascriptExecutor) BaseDriver.getDriver();
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 
     public void verifyContainsText(WebElement element, String value) {
         wait.until(ExpectedConditions.textToBePresentInElement(element, value));
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
-        new Actions(BD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+        new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
 }

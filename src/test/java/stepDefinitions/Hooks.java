@@ -2,7 +2,7 @@ package stepDefinitions;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import utilities.BD;
+import utilities.BaseDriver;
 
 public class Hooks {
 
@@ -13,6 +13,6 @@ public class Hooks {
 
     @AfterClass
     public void afterClass() {
-        BD.getDriver().quit();
+        BaseDriver.getDriver().quit();
     }
 }
