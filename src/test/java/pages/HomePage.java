@@ -7,6 +7,7 @@ public class HomePage extends MyMethods{
     public HomePage() {
         PageFactory.initElements(BaseDriver.getDriver(), this);
     }
+    //
 
 
 
