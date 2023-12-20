@@ -37,4 +37,8 @@ public class MyMethods {
         Assert.assertTrue(element.getText().toLowerCase().contains(value.toLowerCase()));
         new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
+
+    public void waitForElementVisibility(WebElement element) {
+        wait.until(ExpectedConditions.visibilityOf(element));
+    }
 }

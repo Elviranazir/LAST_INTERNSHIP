@@ -69,4 +69,14 @@ public static WebDriver driver;
 //
 //
 //    }
+
+    public static void quitDriver(){
+
+        if (driver!=null){
+            driver.quit();
+            driver=null;
+        }
+
+
+    }
 }

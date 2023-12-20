@@ -23,6 +23,6 @@ public class LoginPage extends MyMethods {
     @FindBy(xpath = "//span[contains(text(), 'Welcome')]")
     public WebElement welcomeMessage;
 
-    @FindBy(xpath = "//div[text()='Invalid username or password']")
+    @FindBy(xpath = "//div[contains(text(),'Invalid username or password')]")
     public WebElement invalidMessage;
 }

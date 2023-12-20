@@ -11,14 +11,37 @@ Feature: As a user I need to make sure that all the main feature buttons at the 
     And Click on the Login button.
     And Home page should be displayed
 
-  Scenario:US-3 Home - Positive Test Case
+  Scenario:US-3 Home - Positive Test Case - Logo
     And Verify Presence and Clickability of Logo
+
+  Scenario: US-3 Home - Positive Test Case - Courses
     And Verify Presence and Clickability of Courses
-    And Verify Presence and Clickability of Calendar
-    And Verify Presence and Clickability of Attendance
-    And Verify Presence and Clickability of Assignments
-    And Verify Presence and Clickability of Grading
-    And Verify Presence and Clickability of Hamburger Menu
-    And Verify Presence and Clickability of Chat MSG
-    And Verify Presence and Clickability of Message
+
+    Scenario: US-3 Home - Positive Test Case - Calendar
+      And Verify Presence and Clickability of Calendar
+
+  Scenario: US-3 Home - Positive Test Case - Attendance
+        And Verify Presence and Clickability of Attendance
+
+  Scenario: US-3 Home - Positive Test Case - Assignments
+        And Verify Presence and Clickability of Assignments
+
+  Scenario: US-3 Home - Positive Test Case - Grading
+        And Verify Presence and Clickability of Grading
+
+  Scenario: US-3 Home - Positive Test Case - Hamburger Menu
+        And Verify Presence and Clickability of Hamburger Menu
+
+  Scenario: US-3 Home - Positive Test Case - Chat MSG
+        And Verify Presence and Clickability of Chat MSG
+
+  Scenario: US-3 Home - Positive Test Case - Message
+        And Verify Presence and Clickability of Message
+
+  Scenario: US-3 Home - Positive Test Case - Profile
     And Verify Presence and Clickability of Profile
+
+
+
+
+
