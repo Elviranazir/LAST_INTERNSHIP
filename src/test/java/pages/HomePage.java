@@ -59,6 +59,10 @@ public class HomePage extends MyMethods{
     @FindBy(xpath = "//span[.='Sign Out']")
     public WebElement profileSignOut;
 
+    @FindBy(xpath = "ms-layout-menu-button[caption='COURSE.TITLE.BROWSER']")
+    public WebElement gradingB;
+
+
 
 
 }

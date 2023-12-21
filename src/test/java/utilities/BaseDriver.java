@@ -1,8 +1,6 @@
 package utilities;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.time.Duration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
