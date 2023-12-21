@@ -5,6 +5,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.testng.Assert;
 import pages.LoginPage;
+import pages.MyMethods;
 import utilities.BaseDriver;
 
 
@@ -40,7 +41,8 @@ public class US1Login {
 
     @Then("Error message should be displayed")
     public void errorMessageShouldBeDisplayed() {
-        Assert.assertTrue(lp.invalidMessage.isDisplayed(),"Test Failed");
+        lp.waitForElementVisibility(lp.invalidMessage);
+        Assert.assertTrue(lp.invalidMessage.getText().contains("Invalid"),"Test Failed");
     }
 }
 
