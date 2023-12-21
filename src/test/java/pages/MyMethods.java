@@ -38,7 +38,7 @@ public class MyMethods {
         new Actions(BaseDriver.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
     }
 
-    public void waitForElementVisibility(WebElement element) {
+    public void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 }
