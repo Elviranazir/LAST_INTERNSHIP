@@ -1,11 +1,13 @@
 package pages;
 
+import io.cucumber.java.zh_cn.假如;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.BaseDriver;
 
-public class HamburgerMenu extends MyMethods{
+public class
+HamburgerMenu extends MyMethods{
     public HamburgerMenu() {
         PageFactory.initElements(BaseDriver.getDriver(), this);
     }
@@ -13,8 +15,6 @@ public class HamburgerMenu extends MyMethods{
 
     @FindBy(xpath = "(//button[@aria-haspopup='menu'])[1]")   // locators by Yaren
     public WebElement hamburgerIcon;
-
-
 
    //Messaging
     @FindBy(xpath = "//span[text()='Messaging']")  // locators created by Yaren
@@ -49,7 +49,30 @@ public WebElement chooseReceivers;
 @FindBy(xpath = "//span[text()='Add & Close']")
     public WebElement addAndCloseButton;
 
-@FindBy(xpath ="//div[@class='mat-form-field-infix ng-tns-c2794762957-86']")
+@FindBy(css = "ms-text-field[placeholder='USER_MESSAGES.TITLE.SUBJECT']>input")
     public WebElement subject;
 
+    @FindBy(css = "iframe[title='Rich Text Area']")
+    public WebElement iframeRichTextArea;
+@FindBy(xpath = "//body[@id='tinymce']")
+public  WebElement textArea;
+@FindBy(xpath = "(//ms-button[@class='ng-star-inserted'])[2]")
+public WebElement sendButton;
+
+@FindBy(xpath = "//button[@class='mat-mdc-tooltip-trigger mdc-icon-button mat-mdc-icon-button mat-warn mat-mdc-button-base ng-star-inserted']")
+public WebElement moveToThrash;
+
+@FindBy(xpath = "(//td[@class='mat-mdc-cell mdc-data-table__cell cdk-cell cdk-column-title mat-column-title ng-tns-c525091484-86 ng-star-inserted'])[1]")
+public WebElement subjectOfSentMessage;
+
+@FindBy(xpath = "//mat-dialog-actions[@class='mat-mdc-dialog-actions mdc-dialog__actions']")
+    public WebElement deletingPopUp;
+
+@FindBy(xpath = "//div[contains(text(),'Successfully')]")
+public WebElement successAlert;
+
+@FindBy(xpath = "//button[@type='submit']")
+    public  WebElement alertYesButton;
+@FindBy(xpath ="//button[@class='mdc-button mat-mdc-button mdc-button--raised mat-mdc-raised-button mat-unthemed mat-mdc-button-base']")
+    public WebElement alertNoButton;
 }

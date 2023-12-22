@@ -41,4 +41,8 @@ public class MyMethods {
     public void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
+    public void waitUntilInvisible(WebElement element){
+        WebDriverWait wait1 = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(150));
+        wait1.until(ExpectedConditions.invisibilityOf(element));
+    }
 }
