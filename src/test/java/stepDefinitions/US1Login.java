@@ -41,7 +41,7 @@ public class US1Login {
 
     @Then("Error message should be displayed")
     public void errorMessageShouldBeDisplayed() {
-        lp.waitForElementVisibility(lp.invalidMessage);
+        lp.waitUntilVisible(lp.invalidMessage);
         Assert.assertTrue(lp.invalidMessage.getText().contains("Invalid"),"Test Failed");
     }
 }
