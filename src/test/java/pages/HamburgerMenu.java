@@ -79,10 +79,12 @@ HamburgerMenu extends MyMethods {
     @FindBy(xpath = "//button[@class='mdc-button mat-mdc-button mdc-button--raised mat-mdc-raised-button mat-unthemed mat-mdc-button-base']")
     public WebElement alertNoButton;
 
+
     @FindBy(xpath = "//div[contains(text(), 'Do you want to delete:')]")
     public WebElement permanentlyDelete;
 
     @FindBy(xpath = "(//ms-standard-button[@icon='trash-restore'])[1]")
     public WebElement restoreButton;
+
 
 }
