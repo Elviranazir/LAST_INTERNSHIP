@@ -12,7 +12,7 @@ import java.awt.*;
 public class Finance {
 
     public Finance() {
-        PageFactory.initElements(BaseDriver.getDriver(),this);
+        PageFactory.initElements(BaseDriver.getDriver(), this);
     }
 
     @FindBy(xpath = "//span[text()='Finance']")
@@ -66,6 +66,15 @@ public class Finance {
     @FindBy(xpath = "//div[text()='Student Payment successfully created']")
     public WebElement successMessage;
 
+    @FindBy(xpath = "(//mat-select[@role='combobox'])[1]")
+    public WebElement chooseAcademicPeriod;
 
+    @FindBy(xpath = "//span[text()=' Internship  ']")
+    public WebElement chooseInternship;
 
+    @FindBy(xpath = "(//td[@role='cell'])[19]")
+    public WebElement balance;
+
+    @FindBy(xpath = "//button[@class='hot-toast-close-btn ng-star-inserted']")
+    public WebElement closeSuccess;
 }

@@ -16,6 +16,7 @@ import java.time.Duration;
 public class US8Finance1 {
 
     Finance fc=new Finance();
+    int balance=10;
     HamburgerMenu hgm=new HamburgerMenu();
     WebDriverWait wait=new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
     @Given("Click on the My Finance link")
@@ -35,7 +36,11 @@ public class US8Finance1 {
         wait.until(ExpectedConditions.visibilityOf(fc.payButton));
         fc.payButton.click();
         wait.until(ExpectedConditions.visibilityOf(fc.amountButton));
-        fc.amountButton.sendKeys("10");
+
+        balance=10;
+        String balanceText=Integer.toString(balance);
+
+        fc.amountButton.sendKeys(balanceText);
         wait.until(ExpectedConditions.visibilityOf(fc.WalletPayButton));
         fc.WalletPayButton.click();
         fc.WalletPayButton.click();
