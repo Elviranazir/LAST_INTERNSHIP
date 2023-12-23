@@ -16,6 +16,7 @@ public class MyMethods {
     public WebDriverWait wait = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(20));
 
     public void myClick(WebElement element) {
+
         wait.until(ExpectedConditions.elementToBeClickable(element));
         scrollToElement(element);
         element.click();
@@ -41,8 +42,10 @@ public class MyMethods {
     public void waitUntilVisible(WebElement element) {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
-    public void waitUntilInvisible(WebElement element){
+
+    public void waitUntilInvisible(WebElement element) {
         WebDriverWait wait1 = new WebDriverWait(BaseDriver.getDriver(), Duration.ofSeconds(150));
         wait1.until(ExpectedConditions.invisibilityOf(element));
     }
-}
+
+    }

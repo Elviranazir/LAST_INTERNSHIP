@@ -28,7 +28,7 @@ public class US6HMMessaging3 {
 
     @And("Check the message deleted successfully")
     public void checkTheMessageDeletedSuccessfully() {
-        hm.verifyContainsText(hm.successAlert, "successfully");
+        hm.verifyContainsText(hm.successAlert1, "successfully");
     }
 
     @Then("Reject the pop-up")
